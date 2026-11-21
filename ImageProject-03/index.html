@@ -2,14 +2,42 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
+    <script src="alienVanish.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-assets>
+        <a-asset-item id="terrain" src="assets/SnowTerrainLow.obj"></a-asset-item>
+        <a-asset-item id="rockArch" src="assets/RockArch.obj"></a-asset-item>
+        <a-asset-item id="rockSmall" src="assets/RockSmall.obj"></a-asset-item>
+        <a-asset-item id="rockSpike" src="assets/RockSpike.obj"></a-asset-item>
+        <a-asset-item id="rockSpike2" src="assets/RockSpike2.obj"></a-asset-item>
+        <a-asset-item id="rockTall" src="assets/RockTall.obj"></a-asset-item>
+        <a-asset-item id="rockTall2" src="assets/RockTall2.obj"></a-asset-item>
+        <a-asset-item id="rockWeird" src="assets/RockWeird.obj"></a-asset-item>
+        <a-asset-item id="alien" src="assets/alien.obj"></a-asset-item>
+        <a-asset-item id="portalOuter" src="assets/portalOuter.obj"></a-asset-item>
+        <a-asset-item id="portalInner" src="assets/portalInner.obj"></a-asset-item>
+      </a-assets>
+      <a-sky src="assets/sky5.jpg"></a-sky>
+      <a-obj-model src="#terrain" material="shader:flat;src:assets/deserttexture.jpg;repeat:40 40" position="0 -2 0" scale="1 .9 1"></a-obj-model>
+      <a-obj-model src="#rockArch" material="shader:flat;src:assets/rocktexture3.jpg;repeat:10 10" position="200 -10 -50" scale="30 30 30"></a-obj-model>
+      <a-obj-model src="#rockArch" material="shader:flat;src:assets/rocktexture3.jpg;repeat:4 4" position="15 -6 95" rotation="0 -20 0" scale="5 7 6"></a-obj-model>
+      <a-obj-model src="#rockArch" material="shader:flat;src:assets/rocktexture3.jpg;repeat:10 10" position="-100 -6 -125" rotation="0 90 0" scale="20 10 15"></a-obj-model>
+      <a-obj-model src="#rockWeird" material="shader:flat;src:assets/rocktexture3.jpg;repeat:4 4" position="131.00899 -115.24535 112.80299" rotation="0 80 0" scale="10 10 10"></a-obj-model>
+      <a-obj-model src="#rockSpike" material="shader:flat;src:assets/rocktexture2.jpg;repeat:2 2" position="-7.94471 -6 -97.99199" rotation="0 90 0" scale="4.13 5 3.49"></a-obj-model>
+      <a-obj-model src="#rockSpike" material="shader:flat;src:assets/rocktexture2.jpg;repeat:2 2" position="64.4316 -16.17697 -72.68425" rotation="0 -13.8 0" scale="3.06 4.43 5"></a-obj-model>
+      <a-obj-model src="#rockTall" material="shader:flat;src:assets/rocktexture2.jpg;repeat:5 5" position="-197.45492 10.44694 155.90973" rotation="0 -13.8 0" scale="8 7 8"></a-obj-model>
+      <a-obj-model src="#rockTall2" material="shader:flat;src:assets/rocktexture3.jpg;repeat:10 5" position="242.81499 -55.39751 -30.64295" scale="8 8.29 8"></a-obj-model>
+      <a-obj-model src="#rockTall2" material="shader:flat;src:assets/rocktexture3.jpg;repeat:10 5" scale="5.26 6.06 4.75" position="-181.47677 -45.44203 -53.77429"></a-obj-model>
+      <a-obj-model src="#rockSpike2" material="shader:flat;src:assets/rocktexture2.jpg;repeat:6 2" position="-134.40159 -8.65899 -218.81682" scale="5.26 5.97 4.57"></a-obj-model>
+      <a-obj-model src="#rockSpike2" material="shader:flat;src:assets/rocktexture2.jpg;repeat:6 2" position="-118.53201 -9.69959 -128.7498" scale="3.35 5.15 4.05" rotation="0 20 0"></a-obj-model>
+      <a-obj-model src="#rockSpike2" material="shader:flat;src:assets/rocktexture2.jpg;repeat:6 2" position="-70.37799 -14.16645 -83.08169" scale="3.4 5.15 3.71" rotation="0 20 0"></a-obj-model>
+      <a-obj-model src="#rockSpike2" material="shader:flat;src:assets/rocktexture2.jpg;repeat:5 2" position="28.81478 -14.45071 -1.2485" scale="4.43 5.61 4.57" rotation="0 185 0"></a-obj-model>
+      <a-obj-model src="#rockSpike2" material="shader:flat;src:assets/rocktexture2.jpg;repeat:5 2" position="28.92487 -8.70894 -144.66079" scale="2.73 4.57 4.62" rotation="0 -20 0"></a-obj-model>
+      <a-obj-model src="#alien" color="grey" position="96.83934 4.64384 23.44192" scale="0.5 0.5 0.5" rotation="145 55.63000000000001 0" vanish-on-look="angle: 20"></a-obj-model>
+      <a-obj-model src="#portalOuter" color="#131426" position="0 -0.90149 0" scale="6 6 6"></a-obj-model>
+      <a-obj-model src="#portalInner" material="shader:flat;src:assets/portaltexture.jpg;repeat:3 3" position="0 -1 0" scale="6 6 6"></a-obj-model>
     </a-scene>
   </body>
 </html>
